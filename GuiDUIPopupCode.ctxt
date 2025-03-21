@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=GuiDUIPopupCode
+comment1.params=title\ page\ type
+comment1.target=GuiDUIPopupCode(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=allCode
+comment2.target=java.lang.String\ parseVars(java.lang.String)
+comment3.params=allCode
+comment3.target=java.lang.String\ parseSettings(java.lang.String)
+comment4.params=allCode
+comment4.target=java.lang.String\ parseInit(java.lang.String)
+comment5.params=allCode
+comment5.target=java.lang.String\ parseActions(java.lang.String)
+comment6.params=page\ type
+comment6.target=javax.swing.JEditorPane\ createCodeTab(java.lang.String,\ java.lang.String)
+comment7.params=e
+comment7.target=void\ hyperlinkUpdate(javax.swing.event.HyperlinkEvent)
+numComments=8

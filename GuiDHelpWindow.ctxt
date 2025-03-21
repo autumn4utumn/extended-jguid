@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=GuiDHelpWindow
+comment1.params=thetitle\ theInfoType
+comment1.target=GuiDHelpWindow(java.lang.String,\ int)
+comment2.params=originalDocPage\ type
+comment2.target=javax.swing.JEditorPane\ createPane(java.lang.String,\ java.lang.String)
+comment3.params=e
+comment3.target=void\ hyperlinkUpdate(javax.swing.event.HyperlinkEvent)
+numComments=4

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=GuiDUIMainPanel
+comment1.params=type
+comment1.target=GuiDUIMainPanel(java.lang.String)
+comment2.params=ce
+comment2.target=void\ componentMoved(java.awt.event.ComponentEvent)
+comment3.params=
+comment3.target=javax.swing.JInternalFrame\ getUserPanel()
+comment4.params=
+comment4.target=java.lang.String\ getUsrPanelTitle()
+comment5.params=s
+comment5.target=void\ setCmpSelection(java.lang.String)
+comment6.params=t
+comment6.target=void\ setUsrPanelTitle(java.lang.String)
+comment7.params=cmp
+comment7.target=void\ addCmp(java.awt.Component)
+comment8.params=cmp
+comment8.target=void\ removeCmp(java.awt.Component)
+comment9.params=
+comment9.target=void\ removeAllCmp()
+numComments=10

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=GuiDUITabButton
+comment0.text=\ \r\n\ Customises\ the\ attributes\ for\ the\ buttons\ on\ the\ ribbon\r\n
+comment1.params=text\ img
+comment1.target=GuiDUITabButton(java.lang.String,\ javax.swing.ImageIcon)
+comment2.params=text
+comment2.target=GuiDUITabButton(java.lang.String)
+comment3.params=
+comment3.target=int\ getButtonHeight()
+comment4.params=
+comment4.target=int\ getButtonWidth()
+numComments=5
