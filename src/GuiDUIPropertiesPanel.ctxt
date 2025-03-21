@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=GuiDUIPropertiesPanel
+comment1.params=
+comment1.target=GuiDUIPropertiesPanel()
+comment2.params=ce
+comment2.target=void\ componentMoved(java.awt.event.ComponentEvent)
+comment3.params=title
+comment3.target=void\ setPropTitle(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getPropTitle()
+comment5.params=lbl\ cmp
+comment5.target=void\ addProperty(javax.swing.JLabel,\ javax.swing.JComponent)
+comment6.params=
+comment6.target=void\ updatePanel()
+comment7.params=cmp
+comment7.target=int\ getCompIndex(java.awt.Component)
+comment8.params=index
+comment8.target=java.awt.Component\ getPropComponent(int)
+comment9.params=
+comment9.target=java.awt.Component[]\ getPropComponents()
+numComments=10

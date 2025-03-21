@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=iGuiDPropMessenger
-comment1.params=gcmp
-comment1.target=void\ changePropPanel(GuiDComponent)
-comment2.params=s
-comment2.target=void\ updateCompSel(java.lang.String)
-comment3.params=
-comment3.target=int[]\ getWindowSize()
-numComments=4

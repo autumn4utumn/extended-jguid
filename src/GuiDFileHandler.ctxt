@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=GuiDFileHandler
+comment1.params=sFilename
+comment1.target=java.lang.String\ readFromFile(java.lang.String)
+comment1.text=\r\n\ Reads\ a\ file\ from\ disk\ sequentially\ and\ returns\ it\ as\ a\ String.\r\n
+comment2.params=isr
+comment2.target=java.lang.String\ read(java.io.InputStreamReader)
+comment3.params=is
+comment3.target=java.lang.String\ read(java.io.InputStream)
+comment4.params=f
+comment4.target=java.lang.String\ readFromFile(java.io.File)
+comment4.text=private\ static\ String\ read(FileReader\ file)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ System.out.println("DEBUG\:\ Running\ GuiDFileHandler-read");\ \ \ \ \r\n\ \ \ \ \ \ \r\n\ \ \ \ \ \ String\ sLine\ \=\ "";\r\n\ \ \ \ \ \ String\ str\ \=\ "";\ \ \ \ \r\n\ \ \ \ \ \ boolean\ eof\ \=\ false;\ \ \ \ \ \r\n\r\n\ \ \ \ \ \ \ if(\ file\ \!\=\ null\ )\r\n\ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ try\ \r\n\ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ BufferedReader\ buff\ \=\ new\ BufferedReader(\ file\ );\r\n\ \ \ \ \ \ \ \ \ \ \ \ int\ i\ \=\ 0;\ \ \ \ \ \ \ \ \ \ \r\n\r\n\ \ \ \ \ \ \ \ \ \ \ \ while(\ \!eof\ )\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sLine\ \=\ buff.readLine();\ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(\ sLine\ \=\=\ null\ )\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eof\ \=\ true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ str\ \=\ str\ +\ "\\n"\ +\ sLine;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ catch(\ IOException\ ioe\ )\r\n\ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ JOptionPane.showMessageDialog(\ null,ioe,"Error",JOptionPane.ERROR_MESSAGE);\r\n\ \ \ \ \ \ \ \ \ }\ \ \ \ \ \r\n\ \ \ \ \ \ }\r\n\ \ \ \ \ \ return\ str;\r\n\r\n}
+comment5.params=filename\ s
+comment5.target=void\ writeToFile(java.io.File,\ java.lang.String)
+comment5.text=\r\n\ Writes\ the\ String\ s\ to\ file\ filename.\r\n\ \ \ \ \r\n
+numComments=6

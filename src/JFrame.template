@@ -1,0 +1,55 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class GuiDFrame
+{
+    JFrame window = new JFrame(); // Creates a new window
+    JTabbedPane tabbedPane = new JTabbedPane(); // Creates a new tabbed pane allowing for tabbed windows
+//[StartVariables]
+    JPanel newPanel = new JPanel(null); // Creates a new panel with a layout of null to add components to
+    
+[Variables]
+//[EndVariables]
+//[StartFrameSettings]
+    /**
+    * Initialises the window and then shows it to the user
+    */
+    public void initFrame()
+    {
+        window.setLayout(new GridLayout(1,1)); // Sets the window to have a grid layout of 1 by 1
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Sets the program to exit if the window is closed
+[FRAMESETTINGS]
+        
+        initNewPanel(); // Initialises the panel
+
+        
+        tabbedPane.add("My Created Tab", newPanel ); // Adds the new panel to the tabs with the name my created tab
+        
+        window.add(tabbedPane);  // Adds the tabbed pane onto the window
+        window.setVisible(true); // Shows the window to the user
+    }
+//[EndFrameSettings]
+//[StartIntialization]
+    /**
+    * Creates the newPanels data
+    */
+    public void initNewPanel()
+    {
+[Intialization]
+    }
+//[EndIntialization]
+    //[StartActions]
+[ACTIONLISTENERS]
+    //[EndActions]
+    /**
+    * Called to run the program
+    */
+    public static void main(String[] args )
+    {
+        GuiDFrame obj = new GuiDFrame(); // Creates a new instance of the GuiDFrame class
+        obj.initFrame(); // Initialises the frame
+    }
+}  
+
+

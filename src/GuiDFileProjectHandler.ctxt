@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=GuiDFileProjectHandler
+comment1.params=f\ type\ props\ v
+comment1.target=GuiDFileProjectHandler(java.io.File,\ java.lang.String,\ java.lang.String[][],\ java.util.Vector)
+comment2.params=
+comment2.target=void\ generateProjectFile()
+comment3.params=gpm
+comment3.target=void\ parseProjectFile(iGuiDPropMessenger)
+comment4.params=
+comment4.target=java.lang.String\ getType()
+comment5.params=
+comment5.target=java.lang.String[][]\ getParentProps()
+comment6.params=
+comment6.target=java.util.Vector\ getComponentVector()
+numComments=7
