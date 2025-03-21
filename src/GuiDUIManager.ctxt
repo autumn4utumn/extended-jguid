@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=GuiDUIManager
+comment1.params=tabs\ toolbox\ gp
+comment1.target=GuiDUIManager(GuiDUIMenuTabs,\ GuiDUIComponentList,\ GuiDUIMainPanel)
+comment2.params=
+comment2.target=void\ removePropertiesPanel()
+comment3.params=theFrameProps
+comment3.target=void\ addParentPropPanel(GuiDUIPropertiesPanel)
+comment4.params=theComponentProps
+comment4.target=void\ updatePropertiesPanel(GuiDUIPropertiesPanel)
+comment5.params=ce
+comment5.target=void\ stateChanged(javax.swing.event.ChangeEvent)
+numComments=6

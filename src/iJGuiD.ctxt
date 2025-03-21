@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=iJGuiD
+comment1.params=type
+comment1.target=void\ startNewProject(java.lang.String)
+comment2.params=f
+comment2.target=void\ openExistingProject(java.io.File)
+comment3.params=
+comment3.target=void\ showProjectDialog()
+numComments=4
