@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.target=GuiDFileReaderProperties
-comment1.params=cast\ no\ x\ y
-comment1.target=java.lang.String[][]\ getProperties(java.lang.String,\ int,\ int,\ int)
-numComments=2
