@@ -76,7 +76,11 @@ public class GuiDComponent
     
     //END OF PROPS 8-10
     
-    public final int TOOLTIPTEXT=11;    
+    public final int TOOLTIPTEXT=11;  
+    public final int USECENTERFUNCTIONX=12;
+    public final int CENTERFUNCTIONXOFFSET=13;
+    public final int USECENTERFUNCTIONY=14;
+    public final int CENTERFUNCTIONYOFFSET=15;
     
     
     public GuiDComponent(String componentType,int no,int x,int y,iGuiDPropMessenger gpm)
@@ -344,7 +348,9 @@ public class GuiDComponent
     private void createComponent()
     {
         System.out.println("DEBUG: Creating Component in GuiDComponent.java 344");
-        System.out.println("DEBUG: Component type is "+componentType);        
+        System.out.println("DEBUG: Component type is "+componentType);    
+        props[USECENTERFUNCTIONX][PROPERTYVALUE] = "false";
+        props[USECENTERFUNCTIONY][PROPERTYVALUE] = "false";
         
         if(componentType.equals("JButton"))
         {
@@ -597,10 +603,13 @@ public class GuiDComponent
                             System.out.println("Center added");
                             validateXLocation = (igpm.getWindowSize()[0] / 2) - (Integer.parseInt(props[WIDTH][PROPERTYVALUE]) / 2);
                             validLocation = "" + validateXLocation;
+                            props[USECENTERFUNCTIONX][PROPERTYVALUE] = "true";
+                            props[CENTERFUNCTIONXOFFSET][PROPERTYVALUE] = "0";
                         }
                         else {
-                        validateXLocation = Integer.parseInt(tm.getText());
-                        validLocation = tm.getText();
+                            validateXLocation = Integer.parseInt(tm.getText());
+                            validLocation = tm.getText();
+                            props[USECENTERFUNCTIONX][PROPERTYVALUE] = "false";
                         }
                         
                         
@@ -667,12 +676,15 @@ public class GuiDComponent
                         String internalText = tm.getText();
                         int validateYLocation = -1;
                         if(internalText.startsWith("CENTER")) {
-                        	System.out.println("Center Added");
-                        	validateYLocation = (igpm.getWindowSize()[1] / 2) - (Integer.parseInt(props[WIDTH][PROPERTYVALUE]) / 2);
-                        	validLocation = "" + validateYLocation;
+                            System.out.println("Center Added");
+                            validateYLocation = (igpm.getWindowSize()[1] / 2) - (Integer.parseInt(props[HEIGHT][PROPERTYVALUE]) / 2);
+                            validLocation = "" + validateYLocation;
+                            props[USECENTERFUNCTIONY][PROPERTYVALUE] = "true";
+                            props[CENTERFUNCTIONYOFFSET][PROPERTYVALUE] = "0";
                         } else {
-                        	validateYLocation = Integer.parseInt(internalText);
-                        	validLocation = internalText;
+                            validateYLocation = Integer.parseInt(internalText);
+                            validLocation = internalText;
+                            props[USECENTERFUNCTIONY][PROPERTYVALUE] = "false";
                         }
                         		
                         		

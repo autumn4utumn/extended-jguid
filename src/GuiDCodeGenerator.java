@@ -120,9 +120,53 @@ public class GuiDCodeGenerator
             GuiDComponent gc = v.elementAt(i);
             String props[][] = gc.getPropertiesArray();
             
-            setup_gui+="        "+props[0][2]+".setLocation("+props[1][2]+","+props[2][2]+"); // Sets the location to be " + props[1][2]+ "px right & " + props[2][2] + "px down\n";
+            // Verify if the custom centerWithOffset function is needed
+            boolean useCenterX = Boolean.parseBoolean(props[12][2]);
+            boolean useCenterY = Boolean.parseBoolean(props[14][2]);
+            
+            String locationX = "";
+            String locationY = "";
+            
+            String XComment = "";
+            String YComment = "";
+            
+            setup_gui+="        "+"int "+props[0][2]+"_width = " + props[3][2] + "; // A variable to store the width of element "+props[0][2]+"\n";
+            setup_gui+="        "+"int "+props[0][2]+"_height = " + props[4][2] + "; // A variable to store the height of element "+props[0][2]+"\n";
+            
+            if(useCenterX) {
+                String offset = props[13][2];
+                locationX = "centerXWithOffset(" + offset + ", " + props[0][2]+"_width)";
+                if(offset.equals("0"))
+                {
+                    XComment = "centered on X with no offset";
+                }
+                else
+                {
+                    XComment = "centered on X with an offset of " + offset + "px";
+                }
+            } else {
+                locationX = props[1][2];
+                XComment = props[1][2] + "px right";
+            }
+            if(useCenterX) {
+                String offset = props[15][2];
+                locationY = "centerYWithOffset(" + offset + ", " + props[0][2]+"_height)";
+                if(offset.equals("0"))
+                {
+                    YComment = "centered on X with no offset";
+                }
+                else
+                {
+                    YComment = "centered on X with an offset of " + offset + "px";
+                }
+            } else {
+                locationY = props[2][2];
+                YComment = props[2][2] + "px down";
+            }
+            
+            setup_gui+="        "+props[0][2]+".setLocation("+locationX+","+locationY+"); // Sets the location to be " + XComment + " & " + YComment + "\n";
 
-            setup_gui+="        "+props[0][2]+".setSize("+props[3][2]+","+props[4][2]+"); // Sets the size to be " + props[3][2] + "px by " + props[4][2] + "px\n";
+            setup_gui+="        "+props[0][2]+".setSize("+props[0][2]+"_width,"+props[0][2]+"_height); // Sets the size to be " + props[3][2] + "px by " + props[4][2] + "px\n";
             
             if(Integer.parseInt(props[5][2])!=-13421773)
                 setup_gui+="        "+props[0][2]+".setForeground( new Color("+props[5][2]+") ); // Sets the colour to be "+ props[5][2] + "\n";

@@ -43,6 +43,26 @@ public class GuiDFrame
 [ACTIONLISTENERS]
     //[EndActions]
     /**
+    * A function used to center an elements X axis on the UI
+    * @param offset The amount of offset to use
+    * @param width The width of the element
+    * @return Returns an int of where the element should be placed to center it
+    */
+    public int centerXWithOffset(int offset, int width) {
+        return (window.getWidth() / 2) - offset - (width / 2);
+    }
+
+    /**
+    * A function used to center an elements Y axis on the UI
+    * @param offset The amount of offset to use
+    * @param height The height of the element
+    * @return Returns an int of where the element should be placed to center it
+    */
+    public int centerYWithOffset(int offset, int height) {
+        return (window.getHeight() / 2) - offset - (height / 2);
+    }
+
+    /**
     * Called to run the program
     */
     public static void main(String[] args )
